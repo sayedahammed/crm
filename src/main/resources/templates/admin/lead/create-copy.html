@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/admin/admin_layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Lead</title>
+</head>
+<body>
+    <div layout:fragment="content">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid small">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4>Lead</h4>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item">Lead</li>
+                            <li class="breadcrumb-item active">Create</li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content small">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-info">
+                            <div class="card-header card-header-custom">
+                                <span class="card-title-custom">Account Information</span>
+                            </div>
+                            <form class="form-horizontal">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-group row">
+                                                <label for="customer-name" class="col-sm-4 col-form-label">Customer Name</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control form-control-sm" id="customer-name" placeholder="Customer name">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="agreement-expire-date" class="col-sm-4 col-form-label">Agreement Expire Date</label>
+                                                <div class="col-sm-8">
+                                                    <input type="date" class="form-control form-control-sm" id="agreement-expire-date">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label" for="latitude">Vodafone Coverage</label>
+                                                <div class="input-group input-group-sm col-sm-3">
+                                                    <input type="text" id="latitude" class="form-control" placeholder="Latitude">
+                                                </div>
+                                                <div class="input-group input-group-sm col-sm-3">
+                                                    <input type="text" id="longitude" class="form-control" placeholder="Longitude">
+                                                </div>
+                                                <div class="input-group input-group-sm col-sm-2">
+                                                    <button type="button" class="btn btn-sm btn-info">Check</button>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="remarks" class="col-sm-4 col-form-label">Remarks</label>
+                                                <div class="col-sm-8">
+                                                    <textarea class="form-control form-control-sm" id="remarks" placeholder="Remarks"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Customer Current Products</label>
+                                                <div class="select2-purple col-sm-8">
+                                                    <select class="select2" multiple="multiple" data-placeholder="Choose" data-dropdown-css-class="select2-purple" style="width: 100%;">
+                                                        <option>Postpaid</option>
+                                                        <option>PBX</option>
+                                                        <option>Hybrid</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="interested-products" class="col-sm-4 col-form-label">Vodafone Products</label>
+                                                <div class="select2-purple col-sm-8">
+                                                    <select id="interested-products" class="select2" multiple="multiple" data-placeholder="Choose" data-dropdown-css-class="select2-purple" style="width: 100%;">
+                                                        <option>Postpaid</option>
+                                                        <option>PBX</option>
+                                                        <option>Hybrid</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="follow-up-date" class="col-sm-4 col-form-label">Follow-up Date</label>
+                                                <div class="col-sm-8">
+                                                    <input type="date" class="form-control form-control-sm" id="follow-up-date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-info">
+                            <div class="card-header card-header-custom">
+                                <span class="card-title-custom">More Account Details</span>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <form class="form-horizontal">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Industry</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control form-control-sm" style="width: 100%;">
+                                                        <option selected>Choose</option>
+                                                        <option>Telecommunication</option>
+                                                        <option>Manufacturer</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label"># of Employees</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control form-control-sm" style="width: 100%;">
+                                                        <option selected>Choose</option>
+                                                        <option>< 10</option>
+                                                        <option>< 100</option>
+                                                        <option>> 100</option>
+                                                        <option>> 1000</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">City/Province</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control form-control-sm">
+                                                        <option selected>Choose</option>
+                                                        <option>Dhaka</option>
+                                                        <option>Khulna</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Sub-Industry</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control form-control-sm" style="width: 100%;">
+                                                        <option selected>Choose</option>
+                                                        <option>Software Industry</option>
+                                                        <option>Outsource</option>
+                                                        <option>Service</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="website" class="col-sm-4 col-form-label">Website</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control form-control-sm" id="website" placeholder="Website">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="zip-code" class="col-sm-4 col-form-label">Zip Code</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control form-control-sm" id="zip-code" placeholder="Zip Code">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Company Size</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control form-control-sm">
+                                                        <option selected>Choose</option>
+                                                        <option>Micro</option>
+                                                        <option>Small</option>
+                                                        <option>Medium</option>
+                                                        <option>Large</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Country</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control form-control-sm">
+                                                        <option selected>Choose</option>
+                                                        <option>Africa</option>
+                                                        <option>America</option>
+                                                        <option>Bangladesh</option>
+                                                        <option>India</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="address" class="col-sm-4 col-form-label">Address</label>
+                                                <div class="col-sm-8">
+                                                    <textarea type="text" class="form-control form-control-sm" id="address" placeholder="Address"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-info">
+                            <div class="card-header card-header-custom">
+                                <span class="card-title-custom">Contact Details</span>
+                            </div>
+                            <form class="form-horizontal">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form-group row">
+                                                <label for="first-name" class="col-sm-4 col-form-label">First Name</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control form-control-sm" id="first-name" placeholder="First Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-group row">
+                                                <label for="last-name" class="col-sm-4 col-form-label">Last Name</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control form-control-sm" id="last-name" placeholder="Last Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-group row">
+                                                <label for="phone" class="col-sm-4 col-form-label">Phone</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control form-control-sm" id="phone" placeholder="Phone">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-group row">
+                                                <label for="email" class="col-sm-4 col-form-label">Email</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control form-control-sm" id="email" placeholder="Email">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label">Position</label>
+                                                <div class="col-sm-8">
+                                                    <select class="form-control form-control-sm" style="width: 100%;">
+                                                        <option>Business</option>
+                                                        <option>Engineer</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+
+    <th:block layout:fragment="script">
+        <!-- DataTables  & Plugins -->
+        <script src="/admin/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="/admin/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="/admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+        <script src="/admin/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="/admin/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+        <script src="/admin/plugins/jszip/jszip.min.js"></script>
+        <script src="/admin/plugins/pdfmake/pdfmake.min.js"></script>
+        <script src="/admin/plugins/pdfmake/vfs_fonts.js"></script>
+        <script src="/admin/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+        <script src="/admin/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+        <script src="/admin/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+        <script>
+            $(function () {
+                //Initialize Select2 Elements
+                $('.select2').select2()
+
+                //Initialize Select2 Elements
+                $('.select2bs4').select2({
+                    theme: 'bootstrap4'
+                })
+                $("#example1").DataTable({
+                    "responsive": true, "lengthChange": false, "autoWidth": false,
+                    "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+                }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+                $('#example2').DataTable({
+                    "paging": true,
+                    "lengthChange": false,
+                    "searching": false,
+                    "ordering": true,
+                    "info": true,
+                    "autoWidth": false,
+                    "responsive": true,
+                });
+            });
+        </script>
+    </th:block>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+/**
+ * Card
+ */
+.card-header-custom {
+    padding: 10px 10px 10px 15px !important;
+}
+.card-title-custom {
+    font-size: 0.95rem !important;
+}

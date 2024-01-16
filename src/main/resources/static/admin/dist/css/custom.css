@@ -2,8 +2,24 @@
  * Card
  */
 .card-header-custom {
-    padding: 10px 10px 10px 15px !important;
+    padding: 5px 5px 5px 10px !important;
 }
 .card-title-custom {
     font-size: 0.95rem !important;
+}
+
+/**
+ * Custom
+ */
+.padding-zero {
+    padding: 0 !important;
+}
+.margin-zero {
+    margin: 0 !important;
+}
+.margin-bottom-zero {
+    margin-bottom: 0 !important;
+}
+.margin-top-zero {
+    margin-top: 0 !important;
 }

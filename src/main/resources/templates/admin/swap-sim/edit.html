@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/admin/admin_layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Swap SIM</title>
+</head>
+<body>
+    <div layout:fragment="content">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid small">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4>Swap SIM</h4>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Swap SIM</li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content small">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-info">
+                            <div class="card-header card-header-custom">
+                                <span class="card-title-custom"> <i class="fas fa-user"></i> Subscriber's Summary</span>
+                            </div>
+                            <div class="card-body margin-zero padding-zero">
+                                <div class="d-flex flex-row">
+                                    <div class="flex-grow-1 pr-1">
+                                        <table class="margin-bottom-zero table table-borderless table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="width: 30%"><span class="font-weight-bold">Subscriber's Name:</span></td>
+                                                    <td>UGN Lithium</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="font-weight-bold">Service No:</span></td>
+                                                    <td>98087656</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="font-weight-bold">SIM Serial No:</span></td>
+                                                    <td>89880787654565</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <table class="margin-bottom-zero table table-borderless table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="width: 30%"><span class="font-weight-bold">Plan:</span></td>
+                                                    <td>Postpaid</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="font-weight-bold">Status:</span></td>
+                                                    <td>Active</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="font-weight-bold">In Network Since:</span></td>
+                                                    <td>Feb 1998</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-info">
+                            <div class="card-header card-header-custom">
+                                <span class="card-title-custom"> <i class="fas fa-sim-card"></i> Swap SIM Information</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label>SR Ticket No.</label>
+                                            <input type="text" class="form-control form-control-sm" placeholder="Ticket No.">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label>New Mobile No.</label>
+                                            <input type="text" class="form-control form-control-sm" placeholder="Mobile No.">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label>New SIM Serial No.</label>
+                                            <input type="text" class="form-control form-control-sm" placeholder="SIM Serial No.">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label>Effective From</label>
+                                            <input type="datetime-local" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h6>Reason for Swap SIM:</h6>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <div class="form-group clearfix">
+                                            <div class="icheck-primary d-inline">
+                                                <input type="checkbox" id="checkboxPrimary1" checked>
+                                                <label for="checkboxPrimary1">
+                                                    Lost/Snatch
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group clearfix">
+                                            <div class="icheck-primary d-inline">
+                                                <input type="checkbox" id="checkboxPrimary2" checked>
+                                                <label for="checkboxPrimary2">
+                                                    Physically Damaged/Technical Problem
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn bg-gradient-success btn-sm btn-flat"> <i class='fas fa-save' style='color:#ffffff'></i> Submit</button>
+                                <div class="float-right">
+                                    <i class="fas fa-info-circle"></i> <span class="font-italic">Note: The information may take some time to update after submit.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+
+    <th:block layout:fragment="script">
+        <!-- DataTables  & Plugins -->
+        <script src="/admin/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="/admin/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="/admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+        <script src="/admin/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="/admin/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+        <script src="/admin/plugins/jszip/jszip.min.js"></script>
+        <script src="/admin/plugins/pdfmake/pdfmake.min.js"></script>
+        <script src="/admin/plugins/pdfmake/vfs_fonts.js"></script>
+        <script src="/admin/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+        <script src="/admin/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+        <script src="/admin/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+        <script>
+            $(function () {
+                //Initialize Select2 Elements
+                $('.select2').select2()
+
+                //Initialize Select2 Elements
+                $('.select2bs4').select2({
+                    theme: 'bootstrap4',
+                    placeholder: "Select an option"
+                })
+
+                $("#example1").DataTable({
+                    "responsive": true, "lengthChange": false, "autoWidth": false,
+                    "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+                }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+                $('#example2').DataTable({
+                    "paging": true,
+                    "lengthChange": false,
+                    "searching": false,
+                    "ordering": true,
+                    "info": true,
+                    "autoWidth": false,
+                    "responsive": true,
+                });
+            });
+        </script>
+    </th:block>
+
+</body>
+</html>
